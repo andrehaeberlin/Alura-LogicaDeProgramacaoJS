@@ -1,0 +1,27 @@
+<meta charset = "UTF-8">
+
+<script>
+
+    function pulaLinha()
+    {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase)
+    {
+        document.write(frase);
+        pulaLinha();
+    }
+    
+    var dataLimite = parseInt(prompt("Digite o ano limite para visualisar os anos de Copa do Mundo de futebol."))
+    var anoCopa = 1930;
+    while (anoCopa <= dataLimite)  
+    {
+        mostra("Teve Copa em " + anoCopa);
+        anoCopa = anoCopa + 4;
+    }
+    mostra("Próxima Copa em " + anoCopa);
+
+
+</script>

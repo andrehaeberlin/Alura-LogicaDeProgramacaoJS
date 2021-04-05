@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha()
+    {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase)
+    {
+        document.write(frase);
+        pulaLinha();
+    }
+    
+    function calculaIMC( peso, altura)
+    {
+        return Math.round((peso) / (altura^2)); 
+    }
+
+    var nome = prompt("Informe seu nome");
+    var peso = prompt("Informe seu peso");
+    var altura = prompt("Informe seu altura");
+    var imc = calculaIMC(peso, altura);
+   
+    mostra("<big> Cálculo do IMC </big>")
+
+    mostra(nome + ", " + peso + " kg, " + altura + " m, " +" seu IMC é " + imc);
+
+    if(imc < 18.5)
+    {
+        mostra("IMC Abaixo do recomendado 18,5.");
+    }
+    if(imc > 35)
+    {
+        mostra("IMC Acima do recomendado 35.");
+    }
+    
+    if(imc >= 18.5 && imc <= 35)
+    {
+        mostra("IMC conforme recomendado (entre 18,5 e 35).");
+    }
+
+</script>
